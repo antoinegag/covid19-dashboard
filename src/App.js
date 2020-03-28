@@ -16,7 +16,7 @@ function App() {
             <div className="text-xl">
               {/* Last update: <b>{data.lastUpdate}</b> */}
             </div>
-            <div className="invisible md:visible">
+            <div className="hidden md:block">
               <CovidTimeSeries />
             </div>
           </div>
