@@ -2,6 +2,7 @@ import React from "react";
 
 import useGlobalCovidStats from "../hooks/useGlobalCovidStats";
 import Numbers from "./global/Numbers";
+import { PulseLoader } from "react-spinners";
 
 export default function Global() {
   const [loading, success, data] = useGlobalCovidStats();
@@ -14,7 +15,9 @@ export default function Global() {
           <Numbers date={data.date} data={data} />
         </div>
       ) : (
-        <div>Loading</div>
+        <div className="text-center my-16">
+          <PulseLoader color="#4299e1" />
+        </div>
       )}
     </div>
   );

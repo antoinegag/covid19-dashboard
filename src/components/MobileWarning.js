@@ -9,7 +9,7 @@ export default function MobileWarning() {
         icon={faExclamationCircle}
         className="text-orange-500 mr-2"
       />
-      Screen too small to show graphs
+      Screen too small to display graphs
     </div>
   );
 }

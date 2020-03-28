@@ -21,6 +21,7 @@
     "react-live-clock": "^4.0.3",
     "react-plotly.js": "^2.4.0",
     "react-scripts": "3.4.0",
+    "react-spinners": "^0.8.1",
     "react-timeseries-charts": "^0.16.1"
   },
   "scripts": {
