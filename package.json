@@ -1,0 +1,53 @@
+{
+  "name": "covid19-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "autoprefixer": "^9.7.4",
+    "pondjs": "^0.9.0",
+    "postcss-cli": "^7.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-live-clock": "^4.0.3",
+    "react-scripts": "3.4.0",
+    "react-timeseries-charts": "^0.16.1"
+  },
+  "scripts": {
+    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+    "build:style:watch": "tailwind build src/styles/index.css -o src/styles/tailwind.css --watch",
+    "start": "yarn run build:style:watch && react-scripts start",
+    "build": "yarn run build:style && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "homepage": "https://covid19.antoineg.dev/"
+}
