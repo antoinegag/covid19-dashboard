@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-export default function Disclaimer() {
+export default function Disclaimer({ closable }) {
   const [closed, setClosed] = useState(
     localStorage.getItem("disclaimer-closed")
   );
@@ -10,7 +10,7 @@ export default function Disclaimer() {
     setClosed(true);
   };
 
-  if (closed) {
+  if (closable && closed) {
     return false;
   }
 
@@ -18,7 +18,7 @@ export default function Disclaimer() {
     <div className="bg-red-200 rounded-lg p-4 mb-2">
       <h4 className="font-semibold text-xl">Important disclaimer</h4>
       <p className="mb-2">
-        Data is provided by{" "}
+        Data provided by{" "}
         <a
           className="text-blue-700 underline"
           href="https://github.com/CSSEGISandData/COVID-19"
@@ -33,9 +33,9 @@ export default function Disclaimer() {
         usefulness of any information.
       </p>
       <p className="mb-2 font-bold text-lg">
-        In short, this doesn't perfectly reflect reality.
+        In short, this doesn't perfectly reflect reality. Stay safe!
       </p>
-      <button onClick={close}>Close</button>
+      {closable && <button onClick={close}>Close</button>}
     </div>
   );
 }
