@@ -1,7 +1,7 @@
 import React from "react";
 import ChangeIndicator from "./ChangeIndicator";
 
-function Entry({ label, number, change }) {
+function Entry({ label, number, change, lessIsBetter = false }) {
   return (
     <div className="w-1/3 text-center">
       <div className="font-semibold">{label}</div>
@@ -9,7 +9,11 @@ function Entry({ label, number, change }) {
         {number.toLocaleString()}
       </div>
       <div>
-        <ChangeIndicator change={change.change} count={change.count} />
+        <ChangeIndicator
+          change={change.change}
+          count={change.count}
+          lessIsBetter={lessIsBetter}
+        />
       </div>
     </div>
   );
@@ -32,6 +36,7 @@ export default function Numbers({ date, data }) {
           label="Recovered"
           number={recovered}
           change={data.dayChange.recovered}
+          lessIsBetter
         />
       </div>
     </div>

@@ -1,13 +1,17 @@
 import React from "react";
 import classnames from "classnames";
-export default function ChangeIndicator({ count, change }) {
+export default function ChangeIndicator({
+  count,
+  change,
+  lessIsBetter = false
+}) {
   return (
     <div>
       <div>
         <span
           className={classnames("font-semibold", {
-            "text-red-600": change > 0,
-            "text-green-500": change <= 0
+            "text-red-600": !lessIsBetter ? change > 0 : change < 0,
+            "text-green-600": !lessIsBetter ? change <= 0 : change >= 0
           })}
         >
           {change > 0 && "+"} {change} %
@@ -16,7 +20,7 @@ export default function ChangeIndicator({ count, change }) {
       </div>
       <div>
         {count > 0 && "+ "}
-        {String(count)}
+        {count.toLocaleString()}
       </div>
     </div>
   );
