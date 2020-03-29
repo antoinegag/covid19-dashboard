@@ -1,8 +1,10 @@
-export const defaultLabels = [
+export const defaultCountries = [
   "Canada",
   "US",
   "China",
   "France",
   "Italy",
-  "United Kindom"
+  "United Kindom",
+  "Iran",
+  "Japan"
 ];

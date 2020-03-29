@@ -1,7 +1,7 @@
 import React from "react";
 import Plot from "react-plotly.js";
 import makeTimeSerie from "../../utils/makeTimeSerie";
-import { defaultLabels } from "./plots";
+import { defaultCountries } from "./plots";
 
 export default function Death({ data }) {
   return (
@@ -17,7 +17,7 @@ export default function Death({ data }) {
               "deaths",
               e.name,
               undefined,
-              defaultLabels.includes(e.name) ? true : "legendonly"
+              defaultCountries.includes(e.name) ? true : "legendonly"
             )
           )}
           layout={{

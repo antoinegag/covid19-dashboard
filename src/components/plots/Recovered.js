@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Plot from "react-plotly.js";
 import classnames from "classnames";
 import makeTimeSerie from "../../utils/makeTimeSerie";
-import { defaultLabels } from "./plots";
+import { defaultCountries } from "./plots";
 
 export default function Recovered({ data }) {
   const [scale, setConfirmedScale] = useState("linear");
@@ -19,7 +19,7 @@ export default function Recovered({ data }) {
               "recovered",
               e.name,
               undefined,
-              defaultLabels.includes(e.name) ? true : "legendonly"
+              defaultCountries.includes(e.name) ? true : "legendonly"
             )
           )}
           layout={{
